@@ -1,0 +1,69 @@
+.routecartsm {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    max-width: 420px;
+    padding: 0 24px 22px 24px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.routecartsm__img {
+    position: relative;
+    left: -60px;
+}
+
+.routecartsm__route-header {
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #205694;
+    margin-bottom: 14px;
+}
+
+.routecartsm__list  {
+    display: flex;
+    flex-direction: column;
+    list-style-type: decimal;
+    padding-bottom: 20px;
+    margin-left: 18px;
+}
+
+.routecartsm__item {
+    Font-style: Medium;
+    Font-size: 15px;
+    Line-height: 17px;
+    Opacity: 40%;
+    Fill: Solid;
+    color: #272A35;
+}
+
+.routecartsm__about-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.routecartsm__about-descr {
+    margin-left: 9px;
+    font-weight: 600;
+    Font-size: 15px;
+    Line-height: 17px;
+    color: #000000;
+}
+
+.descr__time, .descr__entertainment{
+    margin-left: 3px;
+    font-weight: 600;
+    color: #3E5E82;
+}
+
+.routecartsm__about-entertainment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+

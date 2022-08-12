@@ -1,0 +1,16 @@
+.citybutton {
+    padding-top: 76px;
+}
+
+.city__main-header {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    color: #205694;
+    margin-bottom: 18px;
+}
+
+.city__main-buttons {
+    display: flex;
+    gap: 40px;
+}

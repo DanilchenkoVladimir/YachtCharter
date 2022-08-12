@@ -1,0 +1,171 @@
+.about {
+    /* position: relative; */
+    background-image: url(/img/about-bg.png);
+    min-height: 100%;
+    /* min-width: 640px;
+    width: 100%; */
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: top center;
+    /* height: 844px; */
+    padding: 85px 0 219px;
+}
+
+
+
+/* .howtoorder::before {
+    position: absolute;
+    content: url(/public/img/bigpalm.png);
+    left: 0;
+    top: -84px;
+} */
+
+.about__main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+
+.about__main::before {
+    position: absolute;
+    content: url(/img/starfish.png);
+    top: -160px;
+    left: -75px;
+}
+
+.about__main::after {
+    position: absolute;
+    content: url(/img/shot.png);
+    top: -125px;
+    right: 0;
+}
+
+/* .howtoorder__main::after {
+    position: absolute;
+    content: url(/public/img/bird.png);
+    right: -53px;
+    top: -191px;
+} */
+
+.about__main-header {
+    padding-top: 5px;
+    font-family: "SignPainter";
+    font-weight: 400;
+    font-style: italic;
+    Font-size: 60px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.about__main-descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 66px;
+    max-width: 591px;
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    margin-bottom: 49px;
+}
+
+
+.about__features-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 204px;
+}
+
+.about__features-plate {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* .about__features-plate::after {
+    position: absolute;
+    content: url(/public/img/ico/about/about-chef.svg);
+    
+} */
+
+.about__features-plate>img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: calc(24%);
+    left: 20px;
+
+
+
+
+    /* top: 40px; */
+    /* position: relative; */
+    /* margin-bottom: 18px; */
+  
+    /* height: 43px; */ 
+    /* align-items: center; */
+    
+}
+
+.features-item-descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 18px;
+}
+
+/* .steps__item-pic>img {
+    margin-right: 16px;
+} */
+
+
+
+/* .item-pic {
+    display: block;
+    width: 100%;
+    height: 81px;
+    background-size: 100% auto;
+    padding: 5px;
+} */
+
+.about__image-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.about__image-wrap::before {
+    position: absolute;
+    content: url(/img/conch.svg);
+    left: 0;
+    top: 51px;
+}
+
+.about__image-wrap::after {
+    position: absolute;
+    content: url(/img/dolphin.svg);
+    right: 0;
+    top: 84px;
+}
+
+
+
+

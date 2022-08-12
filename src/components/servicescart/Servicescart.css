@@ -1,0 +1,53 @@
+.servicescart {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    max-width: 420px;
+    /* max-height: 500px; */
+    padding: 0 24px 22px 24px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.boatcart__img {
+    position: relative;
+    left: -24px;
+}
+
+.servicescart__features-header {
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #205694;
+    margin-bottom: 16px;
+}
+
+.servicescart__features-descr {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    color: #272A35;
+    opacity: 0.4;
+}
+
+.servicescart__price {
+    padding: 23px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.servicescart__price-price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #F8B405;
+    margin-right: 5px;
+}
+
+.servicescart__price-option {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #F8B405;
+}

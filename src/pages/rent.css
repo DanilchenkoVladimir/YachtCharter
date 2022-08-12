@@ -1,0 +1,127 @@
+.wrapper {
+    
+    display: grid;
+    grid-template-columns: 270px 3fr;
+    /* grid-template-rows: auto; */
+    grid-template-areas: 
+          "filter boats boats"
+          "filter boats boats"
+          "filter boats boats";
+    justify-content: center;
+          
+      
+}
+
+.side__filter {
+    padding-left: 10px;
+    padding-top: 54px;
+    padding-right: 40px;
+    border-top: 0.1px solid rgba(255, 255, 255, 0.2);
+    grid-area: filter;
+   
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: -4;
+    background-color: #012146;
+}
+
+.side__filter-header {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 64px;
+    color: #ffff;
+    margin-bottom: 20px;    
+}
+
+.filter-button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+/* identical to box height */
+background: transparent;
+text-align: center;
+border: 2px solid rgba(255, 255, 255, 0.4);
+border-radius: 6px;
+color: #FFFFFF;
+min-width: 105px;
+opacity: 0.4;
+margin-bottom: 24px;
+}
+
+.filter-button:not(:first-child) {
+    margin-left: 10px;
+}
+
+.side__filter-buttons {
+    
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
+   
+}
+
+.side__form-port {
+    padding: 20px 0 20px;
+}
+
+.form__port-header {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+form>input {
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+
+}
+
+form>label {
+    font-weight: 500;
+font-size: 15px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+
+
+
+
+
+
+.catalog__boats {
+    padding-top: 54px;
+    padding-left: 70px;
+    grid-area: boats;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: -4;
+}
+
+
+.catalog__header  {
+    
+    
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 64px;
+    color: #205694;
+    margin-bottom: 20px;
+}
+
+.catalog__main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 115px;
+}
