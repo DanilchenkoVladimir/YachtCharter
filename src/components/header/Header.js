@@ -53,17 +53,18 @@ function Header() {
 
                 <div className="header__top-tel">
                     <img src="/img/ico/tel.svg" alt="" />
-                    <p>+7 (978) 050-43-16</p>           
+                    {/* <p>+7 (978) 050-43-16</p> */}
+                    <a href="tel:+79992557632">+7 (999) 255-76-32</a>           
                 </div>
 
                 <div className="header__top-social">
-                    <a href="viber://chat?number=+79992557632" rel="nofollow"  className="top__social-link">
+                    <a href="viber://chat?number=79992557632" className="top__social-link">
                         <img src="/img/ico/viber.svg" alt="" />
                     </a>
-                    <a href="#id" className="top__social-link">
+                    <a href="https://api.whatsapp.com/send?phone=79992557632" className="top__social-link">
                         <img src="/img/ico/whatsapp.svg" alt="" />
                     </a>
-                    <a href="#id" className="top__social-link">
+                    <a href="https://web.telegram.org/z/" className="top__social-link">
                         <img src="/img/ico/telegramm.svg" alt="" />
                     </a>
                     <a href="#id" className="top__social-link">

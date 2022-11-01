@@ -38,7 +38,8 @@
     margin-right: 10px;
 }
 
-.header__top-tel p {
+.header__top-tel a {
+    color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;

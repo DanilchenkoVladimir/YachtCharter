@@ -106,12 +106,13 @@ export const services = [
   price: 'Цена зависит от аренды яхты',
   option: null
   },
-  { service: 'Морская рыбалка',
-  serviceImg: 'img/services/fishing.jpg',
+  { service: 'Кейтеринг',
+  serviceImg: 'img/services/catering1.jpg',
   about: 'Рыбалку можно совместить с купанием в открытом море, а если повезет — понаблюдать за игрой дельфинов',
   price: 'Цена зависит от аренды яхты',
   option: null
   }
+  
 ];
 
 

@@ -66,6 +66,12 @@ a {
   text-decoration: none;
 }
 
+/* a[href^="tel:"] {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 900;
+} */
+
 /* ul {
   list-style-type: none;
 } */
