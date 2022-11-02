@@ -28,8 +28,8 @@ export const boats = [
     { name: 'Альбатрос',
       boatImg: 'img/boats/Albatros.jpg',
       region: 'crimea',
-      home: 'Севастополь',
-      homePort: 'sevastopol',
+      home: 'Ялта',
+      homePort: 'yalta',
       passenger : 10,
       width: '3.6 м',
       class: 'Комфорт',
@@ -38,10 +38,10 @@ export const boats = [
       id: 'albatros'
     },
     { name: 'Princess 85',
-      boatImg: 'img/boats/Princess85.jpg',
+      boatImg: 'img/boats/Princess85-1.jpg',
       region: 'crimea',
-      home: 'Севастополь',
-      homePort: 'sevastopol',
+      home: 'Балаклава',
+      homePort: 'balaklava',
       passenger : 10,
       width: '3.6 м',
       class: 'Комфорт',
@@ -61,8 +61,8 @@ export const boats = [
       priceOld: 8000,
       id: 'calypso'
     },
-    { name: 'Calypso',
-      boatImg: 'img/boats/Calypso.jpg',
+    { name: 'Mangusta',
+      boatImg: 'img/boats/Mangusta.jpg',
       region: 'sochi',
       home: 'Сочи',
       homePort: 'sochi',
@@ -71,10 +71,10 @@ export const boats = [
       class: 'Комфорт',
       priceNew: 5000,
       priceOld: 8000,
-      id: 'calypso'
+      id: 'mangusta'
     },
-    { name: 'Calypso',
-      boatImg: 'img/boats/Calypso.jpg',
+    { name: 'Merry Fisher 1095',
+      boatImg: 'img/boats/MerryFisher1095.jpg',
       region: 'sochi',
       home: 'Сочи',
       homePort: 'sochi',
@@ -83,7 +83,7 @@ export const boats = [
       class: 'Комфорт',
       priceNew: 5000,
       priceOld: 8000,
-      id: 'calypso'
+      id: 'merryFisher109'
     }
 ];
 
@@ -105,13 +105,13 @@ export const services = [
   about: 'Рыбалку можно совместить с купанием в открытом море, а если повезет — понаблюдать за игрой дельфинов',
   price: 'Цена зависит от аренды яхты',
   option: null
-  },
-  { service: 'Кейтеринг',
-  serviceImg: 'img/services/catering1.jpg',
-  about: 'Рыбалку можно совместить с купанием в открытом море, а если повезет — понаблюдать за игрой дельфинов',
-  price: 'Цена зависит от аренды яхты',
-  option: null
   }
+  // { service: 'Кейтеринг',
+  // serviceImg: 'img/services/catering1.jpg',
+  // about: 'Рыбалку можно совместить с купанием в открытом море, а если повезет — понаблюдать за игрой дельфинов',
+  // price: 'Цена зависит от аренды яхты',
+  // option: null
+  // }
   
 ];
 

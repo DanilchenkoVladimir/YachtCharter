@@ -29,6 +29,10 @@
     letter-spacing: 0.04em;
 }
 
+.header__top-link:hover {
+    text-decoration: underline;
+}
+
 .header__top-tel {
     display: flex;
     align-items: center;

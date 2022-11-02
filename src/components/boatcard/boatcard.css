@@ -10,7 +10,9 @@
 
 .boatcart__img {
     position: relative;
-    left: -24px;
+    /* left: -24px; */
+    width: 420px;
+    height: 254px;
 }
 
 .boatcart__features-header {

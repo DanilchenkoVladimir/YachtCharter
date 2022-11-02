@@ -6,7 +6,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Rent from '../../pages/Rent';
 import Paths from '../../pages/Paths';
 import Main from '../../pages/Main';
-
+// import Footer from '../footer/Footer';
 // import AboutBoat from '../pages/AboutBoat';
 
 function Header() {
@@ -17,14 +17,14 @@ function Header() {
         <div className="container">
             <div className="header__top">
                 <div className="header__top-logo">
-                    <Link to="/main">
+                    <Link to="/">
                         <img src="/img/logo.svg" alt="logo" />
                     </Link>
                 </div>
                 <nav className="header__top-nav">
                     <ul className="header__top-navlist">
                         <li className="header__top-item">
-                            <Link to="/main" className="header__top-link">
+                            <Link to="/" className="header__top-link">
                                 Главная
                             </Link>
                         </li>
@@ -38,13 +38,13 @@ function Header() {
                                 Маршруты
                             </a>
                         </li>
-                        <li className="header__top-item">
+                        {/* <li className="header__top-item">
                             <a href="#id" className="header__top-link">
                                 доп. услуги
                             </a>
-                        </li>
+                        </li> */}
                         <li className="header__top-item">
-                            <a href="#id" className="header__top-link">
+                            <a href="#footer" className="header__top-link">
                                 Контакты
                             </a>
                         </li>
@@ -77,9 +77,10 @@ function Header() {
     </div>
 
         <Routes>
-            <Route path='/main' element={ <Main /> } /> 
-            <Route path='/rent//*' element={ <Rent /> } />
+            <Route path='/' element={ <Main /> } /> 
+            <Route path='/rent' element={ <Rent /> } />
             <Route path='/paths' element={ <Paths /> } />
+            {/* <Route path='/contacts' element={ <Footer /> } /> */}
             {/* <Route path='/aboutBoat/:id' element={ <AboutBoat /> } />    */}
         </Routes>
     </>

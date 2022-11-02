@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
         <div className="container">
             <div className="footer__wrap">
                 <div className="footer__logo">
-                    <Link to="/main">
+                    <Link to="/">
                         <img src="/img/logo.svg" alt="logo" />
                     </Link>
                 </div>

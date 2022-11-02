@@ -6,7 +6,7 @@ import './rent.css';
 import Howtoorder from '../sections/Howtoorder';
 import Boatcard from '../components/boatcard/Boatcard';
 import { boats } from '../Data';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 function Rent() {
   console.log(boats);
