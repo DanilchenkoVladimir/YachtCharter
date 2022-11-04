@@ -41,7 +41,7 @@ function Boatcard(props) {
                     <div className="boatcart__buttons">
                         
                         
-                        <Link className="boatcart__button-reserve" key={props.id} to={`/boats/${props.id}`}>Забронировать</Link>
+                        <a className="boatcart__button-reserve" href="#id">Забронировать</a>
                        
                         <a className="boatcart__button-about" href="#id">Подробнее</a>
                     </div>

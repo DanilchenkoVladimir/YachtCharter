@@ -8,7 +8,7 @@ import About from '../sections/About';
 import SectionTemplate from '../sections/SectionTemplate';
 import Routecartsm from '../components/routecartsm/Routecartsm';
 import Questions from '../sections/Questions';
-
+import { Link } from 'react-router-dom';
 // import { boats } from '../Data'; //старый импорт через файл
 import { services } from '../Data';
 import { routes } from '../Data';
@@ -83,21 +83,22 @@ function Main() {
                 linkText="Открыть каталог"
                 linkHref="/rent"
             />
-
+ 
             <div className="sectionTemplate-slider">
                 <Slider {...settings}>
                     {    
-                        items.map((items) => <Boatcard
-                            key={items.id}
-                            name={items.name}
-                            boatImg={items.boatImg}
-                            home={items.home}
-                            passenger={items.passenger}
-                            width={items.width}
-                            class={items.class}
-                            priceNew={items.priceNew}
-                            priceOld={items.priceOld}
-                        />)
+                        items.map((items) => <Link key={items.id} to={`/boats/${items.id}`}>
+                            <Boatcard
+                                name={items.name}
+                                boatImg={items.boatImg}
+                                home={items.home}
+                                passenger={items.passenger}
+                                width={items.width}
+                                class={items.class}
+                                priceNew={items.priceNew}
+                                priceOld={items.priceOld}
+                            />
+                        </Link>)
                     }
                 </Slider>        
             </div>
