@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Hero from '../components/hero/Hero';
-// import Citybutton from '../sections/Citybutton';
+import Ports from '../components/ports/Ports';
 import Boatcard from '../components/boatcard/Boatcard';
 import Howtoorder from '../sections/Howtoorder';
 import Servicescart from '../components/servicescart/Servicescart';
 import About from '../sections/About';
 import SectionTemplate from '../sections/SectionTemplate';
-
-import '../sections/Citybutton.css';
-
 import Routecartsm from '../components/routecartsm/Routecartsm';
 import Questions from '../sections/Questions';
 
-import { boats } from '../Data';
+// import { boats } from '../Data'; //старый импорт через файл
 import { services } from '../Data';
 import { routes } from '../Data';
 
@@ -20,7 +17,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+
 function Main() {
+    const [items, setItems] = React.useState([]) //хук useState для рендеринга карточек лодок, массив лодок - items
+    
+    React.useEffect(() => {
+        fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items')
+            .then((response) => {
+                return response.json();
+            })
+            .then((json) => {
+                setItems(json);
+            });
+    }, []); //запрос на мокапи, получаем массив под именем json с данными по лодкам
+    
+
     const settings = {
         arrows: true,
         dots: false,
@@ -29,6 +40,8 @@ function Main() {
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 1024,
@@ -55,67 +68,37 @@ function Main() {
             }
           }
         ]
-    };
+    }; //слайдер-настройки
 
-const [filtered, setFiltered] = useState(boats)
-
-  function filterRegion(region) {
-    if(region === 'crimea') {
-      let crimeaBoats = [...boats].filter( boat => boat.region === region)
-        setFiltered(crimeaBoats)
-    } else {
-        let sochiBoats = [...boats].filter( boat => boat.region === region)
-        setFiltered(sochiBoats)
-    }
-  }
-
-
+    
     return (
     <>
         <Hero />
-        {/* <Citybutton /> */}
-
-        <div className="citybutton">
-            <div className="container">
-            <div className="city__main">
-                <h3 className="city__main-header">Выберите город </h3>
-                    <div className="city__main-buttons">
-                    <div className="main__button">
-                        <a className="main__button-link" onClick={ ()=>filterRegion('crimea')} href="#id">
-                      <img className="main__button-img" src="/img/Crimea1.png" alt="" />
-                        </a>
-                    </div>
-                  
-                    <div className="main__button">
-                        <a className="main__button-link" onClick={ ()=>filterRegion('sochi')} href="#id">
-                      <img className="main__button-img" src="/img/Sochi.png" alt="" />
-                        </a>
-                    </div>
-                    </div>
-            </div>
-            </div>
-        </div>
-
-        <SectionTemplate 
-            headerText="Популярные яхты"
-            linkText="Открыть каталог"
-        />
+        <Ports />
+    
         <div className="container">
+            
+            <SectionTemplate 
+                headerText="Все яхты"
+                linkText="Открыть каталог"
+                linkHref="/rent"
+            />
+
             <div className="sectionTemplate-slider">
                 <Slider {...settings}>
-                    {filtered.map((obj) => (
-                        <Boatcard
-                            key={obj.id}
-                            name={obj.name}
-                            boatImg={obj.boatImg}
-                            home={obj.home}
-                            passenger={obj.passenger}
-                            width={obj.width}
-                            class={obj.class}
-                            priceNew={obj.priceNew}
-                            priceOld={obj.priceOld}
-                        />
-                    ))}
+                    {    
+                        items.map((items) => <Boatcard
+                            key={items.id}
+                            name={items.name}
+                            boatImg={items.boatImg}
+                            home={items.home}
+                            passenger={items.passenger}
+                            width={items.width}
+                            class={items.class}
+                            priceNew={items.priceNew}
+                            priceOld={items.priceOld}
+                        />)
+                    }
                 </Slider>        
             </div>
         </div>
@@ -126,6 +109,7 @@ const [filtered, setFiltered] = useState(boats)
             headerText="Дополнительные услуги"
             linkText="Открыть каталог"
         />
+            
             <div className="container">
                 <div className="sectionTemplate-slider">
                     <Slider {...settings}>
@@ -148,7 +132,9 @@ const [filtered, setFiltered] = useState(boats)
         <SectionTemplate 
             headerText="Популярные маршруты"
             linkText="Все маршруты"
+            linkHref="/paths"
         />
+
         <div className="container">
             <div className="sectionTemplate-slider">
                 <Slider {...settings}>

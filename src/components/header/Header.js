@@ -6,6 +6,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Rent from '../../pages/Rent';
 import Paths from '../../pages/Paths';
 import Main from '../../pages/Main';
+import AboutBoat from '../../pages/AboutBoat.js';
 // import Footer from '../footer/Footer';
 // import AboutBoat from '../pages/AboutBoat';
 
@@ -13,7 +14,7 @@ function Header() {
   return (
     <>
 
-    <div className="header">
+    <div className="header" id="header">
         <div className="container">
             <div className="header__top">
                 <div className="header__top-logo">
@@ -80,6 +81,7 @@ function Header() {
             <Route path='/' element={ <Main /> } /> 
             <Route path='/rent' element={ <Rent /> } />
             <Route path='/paths' element={ <Paths /> } />
+            <Route path='/boats/:id' element={ <AboutBoat /> } />
             {/* <Route path='/contacts' element={ <Footer /> } /> */}
             {/* <Route path='/aboutBoat/:id' element={ <AboutBoat /> } />    */}
         </Routes>

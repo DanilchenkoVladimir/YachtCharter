@@ -9,7 +9,7 @@ import { boats } from '../Data';
 // import { useEffect } from 'react';
 
 function Rent() {
-  console.log(boats);
+  // console.log(boats);
 
   const [filtered, setFiltered] = useState(boats)
   

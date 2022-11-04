@@ -1,6 +1,6 @@
 import React from 'react';
 import '../boatcard/boatcard.css';
-// import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 
 
@@ -8,7 +8,7 @@ import '../boatcard/boatcard.css';
 function Boatcard(props) {
     return (
         <>
-        <div className="boatcart" key={props.id}>
+        <div className="boatcart">
             <img className="boatcart__img" src={props.boatImg} alt=""/>
                 <div className="boatcart__features">
                     <h4 className="boatcart__features-header">{props.name}</h4>
@@ -39,7 +39,10 @@ function Boatcard(props) {
                     </div>
 
                     <div className="boatcart__buttons">
-                        <a className="boatcart__button-reserve" href="#id">Забронировать</a>
+                        
+                        
+                        <Link className="boatcart__button-reserve" key={props.id} to={`/boats/${props.id}`}>Забронировать</Link>
+                       
                         <a className="boatcart__button-about" href="#id">Подробнее</a>
                     </div>
                 </div>

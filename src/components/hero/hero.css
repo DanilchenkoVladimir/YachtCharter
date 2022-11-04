@@ -6,6 +6,10 @@
     /* height: 953px; */
 }
 
+.mainscreen {
+    height: 500px;
+}
+
 .mainscreen-video {
     position: absolute;
     left: 0;

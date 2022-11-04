@@ -1,18 +1,15 @@
-
 import React from 'react';
 import '../footer/footer.css';
-import { Link } from 'react-router-dom';
-
 
 function Footer() {
   return (
     <div className="footer" id="footer">
         <div className="container">
             <div className="footer__wrap">
-                <div className="footer__logo">
-                    <Link to="/">
-                        <img src="/img/logo.svg" alt="logo" />
-                    </Link>
+                <div className="footer__logo">  
+                    <a href="#header" className="header__top-link">
+                        <img src="/img/logo.svg" alt="logo"/>
+                    </a>
                 </div>
 
                 <div className="footer__address">
@@ -30,7 +27,7 @@ function Footer() {
                 
                 <div className="footer__tel">
                     <img src="/img/ico/tel.svg" alt="" />
-                    <p>+7 (978) 050-43-16</p>           
+                    <a href="tel:+79992557632">+7 (999) 255-76-32</a>           
                 </div>
 
                 <div className="footer__social">
@@ -47,7 +44,7 @@ function Footer() {
                         <img src="/img/ico/vk.svg" alt="" />
                     </a>              
                 </div>
-
+                
             </div>
         </div>
     </div>
