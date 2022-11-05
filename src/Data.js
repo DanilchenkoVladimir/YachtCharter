@@ -2,7 +2,7 @@
 
 export const boats = [
     { name: 'Princess 58 Diamond',
-      boatImg: 'img/boats/Princess58Diamond.jpg',
+      boatImg: '/img/boats/Princess58Diamond.jpg',
       region: 'crimea',
       home: 'Севастополь',
       homePort: 'sevastopol',
@@ -14,7 +14,7 @@ export const boats = [
       id: 1
     },
     { name: 'Princess VIP',
-      boatImg: 'img/boats/PrincessVIP.jpg',
+      boatImg: '/img/boats/PrincessVIP.jpg',
       region: 'crimea',
       home: 'Севастополь',
       homePort: 'sevastopol',
@@ -26,7 +26,7 @@ export const boats = [
       id: 2
     },
     { name: 'Альбатрос',
-      boatImg: 'img/boats/Albatros.jpg',
+      boatImg: '/img/boats/Albatros.jpg',
       region: 'crimea',
       home: 'Ялта',
       homePort: 'yalta',
@@ -38,7 +38,7 @@ export const boats = [
       id: 'albatros'
     },
     { name: 'Princess 85',
-      boatImg: 'img/boats/Princess85-1.jpg',
+      boatImg: '/img/boats/Princess85-1.jpg',
       region: 'crimea',
       home: 'Балаклава',
       homePort: 'balaklava',
@@ -50,7 +50,7 @@ export const boats = [
       id: 'princess85'
     },
     { name: 'Calypso',
-      boatImg: 'img/boats/Calypso.jpg',
+      boatImg: '/img/boats/Calypso.jpg',
       region: 'sochi',
       home: 'Сочи',
       homePort: 'sochi',
@@ -62,7 +62,7 @@ export const boats = [
       id: 'calypso'
     },
     { name: 'Mangusta',
-      boatImg: 'img/boats/Mangusta.jpg',
+      boatImg: '/img/boats/Mangusta.jpg',
       region: 'sochi',
       home: 'Сочи',
       homePort: 'sochi',
@@ -74,7 +74,7 @@ export const boats = [
       id: 'mangusta'
     },
     { name: 'Merry Fisher 1095',
-      boatImg: 'img/boats/MerryFisher1095.jpg',
+      boatImg: '/img/boats/MerryFisher1095.jpg',
       region: 'sochi',
       home: 'Сочи',
       homePort: 'sochi',

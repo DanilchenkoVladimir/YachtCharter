@@ -1,7 +1,4 @@
-.ma {
-    height: 800px;
-    color: red;
-}
+
 
 .aboutboat__main {
     display: flex;
@@ -11,18 +8,19 @@
 }
 
 .aboutboat__main-slider {
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 620px;
     height: 456px; 
 }
 
 .aboutboat__main-slider img {
     width: 100%;
+    background-size: cover;
     
 }
 
 .aboutboat__main-info {
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 620px;
     height: 456px;
     border-radius: 10px;
@@ -106,3 +104,26 @@
 .aboutboat__price {
     align-items: center;
 }
+
+.slick-dots {
+    bottom: -137px;
+}
+
+.slick-dots li{
+   height: 105px;
+    width: 113px;
+}
+
+.slick-dots li img {
+    /* background-position: center; */
+    background-size: cover;
+}
+
+.slick-list {
+    border-radius: 10px;
+}
+
+/* .slick-track {
+    height: 374px;
+
+} */
