@@ -36,8 +36,7 @@
 .boatcart__item {
     display: flex;
     flex: row;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .boatcart__item-text {

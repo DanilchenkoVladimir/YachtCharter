@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Hero from '../components/hero/Hero';
 import Ports from '../components/ports/Ports';
 import Boatcard from '../components/boatcard/Boatcard';
@@ -19,18 +20,37 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 function Main() {
-    const [items, setItems] = React.useState([]) //хук useState для рендеринга карточек лодок, массив лодок - items
+    const [items, setItem] = React.useState([]) //хук useState для рендеринга карточек лодок, массив лодок - items
+    
+    // React.useEffect(() => {
+    //     fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items')
+    //         .then((response) => {
+    //             return response.json();
+    //         })
+    //         .then((json) => {
+    //             setItems(json);
+    //         });
+    // }, []); //запрос на мокапи, получаем массив под именем json с данными по лодкам
     
     React.useEffect(() => {
-        fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items')
-            .then((response) => {
-                return response.json();
-            })
-            .then((json) => {
-                setItems(json);
-            });
-    }, []); //запрос на мокапи, получаем массив под именем json с данными по лодкам
-    
+        async function fetchBoat() {
+            try {
+                const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/items/');
+                setItem(data);
+            } catch (error) {
+                alert('error...');    
+            }
+        }
+        fetchBoat();    
+    }, []);
+
+    if (!items){
+        return 'loading...';
+    }
+
+
+
+
 
     const settings = {
         arrows: true,
@@ -89,10 +109,11 @@ function Main() {
                     {    
                         items.map((items) => <Link key={items.id} to={`/boats/${items.id}`}>
                             <Boatcard
+                                key={items.id}
                                 name={items.name}
                                 boatImg={items.boatImg}
                                 home={items.home}
-                                passenger={items.passenger}
+                                passengerMax={items.passengerMax}
                                 width={items.width}
                                 class={items.class}
                                 priceNew={items.priceNew}

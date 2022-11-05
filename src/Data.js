@@ -89,30 +89,23 @@ export const boats = [
 
 export const services = [
   { service: 'Профессиональный повар',
-    serviceImg: 'img/services/cook.jpg',
+    serviceImg: '/img/services/cook.jpg',
     about: 'Организуем питание для любого повода и праздника на палубе. Заранее согласуем индивидуальное меню и закупим продукты',
     price: '10 000 ₽',
     option: '+ продукты'
   },
   { service: 'Гидроцикл',
-  serviceImg: 'img/services/scooter.jpg',
+  serviceImg: '/img/services/scooter.jpg',
   about: 'Гидроциклы Bombardier GTX на 215 и 260 л.с к вашим услугам. Маски и ласты для каждого гостя бесплатно!',
   price: '12 000 ₽/час',
   option: null
   },
   { service: 'Морская рыбалка',
-  serviceImg: 'img/services/fishing.jpg',
+  serviceImg: '/img/services/fishing.jpg',
   about: 'Рыбалку можно совместить с купанием в открытом море, а если повезет — понаблюдать за игрой дельфинов',
   price: 'Цена зависит от аренды яхты',
   option: null
-  }
-  // { service: 'Кейтеринг',
-  // serviceImg: 'img/services/catering1.jpg',
-  // about: 'Рыбалку можно совместить с купанием в открытом море, а если повезет — понаблюдать за игрой дельфинов',
-  // price: 'Цена зависит от аренды яхты',
-  // option: null
-  // }
-  
+  }  
 ];
 
 export const questions = [

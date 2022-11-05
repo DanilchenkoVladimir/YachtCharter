@@ -1,4 +1,5 @@
 .sectionTemplate {
+    
     padding: 24px 0 20px 0;
 }
 
@@ -46,6 +47,11 @@
     gap: 10px;
 }
 
+.services__wrap {
+    display: flex;
+    gap: 10px;
+
+}
 
 
 

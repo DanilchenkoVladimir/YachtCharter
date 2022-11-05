@@ -20,7 +20,7 @@ function Boatcard(props) {
                                 </li>
                                 <li className="boatcart__item">
                                     <img className="boatcart__item-img" src="/img/ico/people.svg" alt=""/>
-                                    <p className="boatcart__item-text">{props.passenger}</p>
+                                    <p className="boatcart__item-text">{props.passengerMax}</p>
                                 </li>
                                 <li className="boatcart__item">
                                     <img className="boatcart__item-img" src="/img/ico/boat.svg" alt=""/>

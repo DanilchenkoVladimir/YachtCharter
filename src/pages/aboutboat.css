@@ -37,18 +37,72 @@
     font-size: 40px;
     line-height: 48px;
     color: #205694;
-    
 }
 
 .line{
-    
     opacity: 0.1;
     border-bottom: 1px solid #000000;
 }
 
-
-
-.boatcart__item-data {
-    color:aqua;
+.aboutboat__main-about {
+    padding: 30px 65px 30px 50px;
 }
 
+.aboutboat__list-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutboat__item {
+    display: flex;
+    flex: row;
+    align-items: center;
+    margin-bottom: 13px; 
+}
+
+.aboutboat__item-text {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.aboutboat__item-data {
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    color: #3E5E82;
+}
+
+.reserve__wrap {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 90px 11px 50px;
+    align-items: center;
+}
+
+.aboutboat__button {
+    display: flex;
+    align-items: center;
+}
+
+.aboutboat__button-reserve {
+    
+        min-width: 260px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
+        border-radius: 6px;
+        padding: 19px 47px 19px 47px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        color: #000000;
+        margin-right: 11px; 
+}
+
+.aboutboat__price {
+    align-items: center;
+}
