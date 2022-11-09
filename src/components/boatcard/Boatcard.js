@@ -6,6 +6,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 
 function Boatcard(props) {
+    
+
     return (
         <>
         <div className="boatcart">
@@ -41,12 +43,14 @@ function Boatcard(props) {
                     <div className="boatcart__buttons">
                         
                         
-                        <a className="boatcart__button-reserve" href="#id">Забронировать</a>
+                        <a className="boatcart__button-reserve" href="#id" >Забронировать</a>
                        
                         <a className="boatcart__button-about" href="#id">Подробнее</a>
                     </div>
                 </div>
         </div>
+
+       
     </>
     );
 }

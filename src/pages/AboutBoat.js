@@ -5,6 +5,7 @@ import SectionTemplate from '../sections/SectionTemplate';
 import Servicescart from '../components/servicescart/Servicescart';
 import Reservecalc from '../components/reservecalc/Reservecalc';
 import Sliderabout from '../components/sliderabout/Sliderabout';
+import Modalreserv from '../components/modalreserv/Modalreserv';
 
 import '../pages/aboutboat.css';
 import { services } from '../Data';
@@ -13,6 +14,10 @@ function AboutBoat() {
     
   const [items, setItem] = React.useState();
   const { id } = useParams();
+  
+  const [buttonPopup, setButtonPopup] = React.useState(false);
+
+ 
   
   
   React.useEffect(() => {
@@ -103,7 +108,7 @@ function AboutBoat() {
 
                     <div className="reserve__wrap">
                         <div className="aboutboat__button">
-                            <a className="aboutboat__button-reserve" href="#id">Забронировать</a>
+                            <a className="aboutboat__button-reserve" href="#id" onClick={() => setButtonPopup(true)}>Забронировать</a>
                         </div>
 
                         <div className="aboutboat__price">
@@ -113,6 +118,15 @@ function AboutBoat() {
                     </div>
                 </div>
             </div>
+
+            <Modalreserv {...items}
+                
+                trigger={buttonPopup}
+                setTrigger={setButtonPopup}
+            >
+                
+            </Modalreserv>    
+            
 
             <Reservecalc />
 

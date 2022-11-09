@@ -10,6 +10,8 @@ import SectionTemplate from '../sections/SectionTemplate';
 import Routecartsm from '../components/routecartsm/Routecartsm';
 import Questions from '../sections/Questions';
 import { Link } from 'react-router-dom';
+
+
 // import { boats } from '../Data'; //старый импорт через файл
 import { services } from '../Data';
 import { routes } from '../Data';
@@ -19,8 +21,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
+
 function Main() {
     const [items, setItem] = React.useState([]) //хук useState для рендеринга карточек лодок, массив лодок - items
+    
     
     // React.useEffect(() => {
     //     fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items')
@@ -118,12 +122,16 @@ function Main() {
                                 class={items.class}
                                 priceNew={items.priceNew}
                                 priceOld={items.priceOld}
+                                // active={modalActive}
+                                // setActive={setModalActive}
                             />
                         </Link>)
                     }
                 </Slider>        
             </div>
         </div>
+        
+        
 
         <Howtoorder />
         
