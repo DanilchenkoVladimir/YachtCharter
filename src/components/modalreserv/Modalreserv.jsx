@@ -22,7 +22,8 @@ function Modalreserv(props){
                         
                     <div className="input__wrap-top">
                         <input className="input__main" type="text"  placeholder="Количество человек"/>
-                        <input className="input__main" type="text"  placeholder="Планируемая дата"/>
+                        <input className="input__main" type="date" id="date" name="date" placeholder="Планируемая дата"/>
+                        
                     </div>    
                             
                     <div className="input__wrap-center">

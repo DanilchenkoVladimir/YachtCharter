@@ -1,11 +1,12 @@
 import React from 'react';
 import '../boatcard/boatcard.css';
 import { Routes, Route, Link } from 'react-router-dom';
-
+import Modalreserv from '../modalreserv/Modalreserv';
 
 
 
 function Boatcard(props) {
+    const [buttonPopup, setButtonPopup] = React.useState(false);
     
 
     return (
@@ -41,16 +42,23 @@ function Boatcard(props) {
                     </div>
 
                     <div className="boatcart__buttons">
-                        
-                        
-                        <a className="boatcart__button-reserve" href="#id" >Забронировать</a>
+                    <a className="boatcart__button-reserve" href="#id" onClick={() => setButtonPopup(true)}>Забронировать</a>    
+                    <Link className="boatcart__button-about" key={props.id} to={`/boats/${props.id}`}>Подробнее</Link>
+                        {/* <a  href="#id" >Забронировать</a>
                        
-                        <a className="boatcart__button-about" href="#id">Подробнее</a>
+                        <a className="boatcart__button-about" href="#id">Подробнее</a> */}
                     </div>
                 </div>
         </div>
+        <Modalreserv {...props}
+                
+                trigger={buttonPopup}
+                setTrigger={setButtonPopup}
+            >
+                
+            </Modalreserv> 
 
-       
+      
     </>
     );
 }

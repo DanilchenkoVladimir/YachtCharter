@@ -24,6 +24,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Main() {
     const [items, setItem] = React.useState([]) //хук useState для рендеринга карточек лодок, массив лодок - items
+
+    
     
     
     // React.useEffect(() => {
@@ -111,9 +113,9 @@ function Main() {
             <div className="sectionTemplate-slider">
                 <Slider {...settings}>
                     {    
-                        items.map((items) => <Link key={items.id} to={`/boats/${items.id}`}>
+                        items.map((items) => (
                             <Boatcard
-                                key={items.id}
+                                id={items.id}
                                 name={items.name}
                                 boatImg={items.boatImg}
                                 home={items.home}
@@ -122,17 +124,17 @@ function Main() {
                                 class={items.class}
                                 priceNew={items.priceNew}
                                 priceOld={items.priceOld}
-                                // active={modalActive}
-                                // setActive={setModalActive}
+                                
                             />
-                        </Link>)
+                        ))
                     }
                 </Slider>        
             </div>
         </div>
-        
-        
 
+        
+        
+    
         <Howtoorder />
         
         <SectionTemplate 

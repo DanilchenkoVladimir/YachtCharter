@@ -124,3 +124,13 @@ input label {
     text-align: center;
     color: #000000;
 }
+
+/* input[type=date]::-webkit-calendar-picker-indicator{
+	display:none;
+}
+input[type=date]{
+	background:url("/img/ico/reserv-calendar.svg") #f7f9fc no-repeat 90% 50%;
+} */
+
+
+
