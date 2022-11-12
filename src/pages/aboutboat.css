@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 80px 0 70px 0;
+    height: 606px;
 }
 
 .aboutboat__main-slider {
@@ -32,7 +33,7 @@
 .aboutboat__header {   
     padding: 44px 165px 22px 50px;
     font-weight: 500;
-    font-size: 40px;
+    font-size: 37px;
     line-height: 48px;
     color: #205694;
 }
@@ -89,8 +90,9 @@
 .aboutboat__button-reserve {
     
         min-width: 260px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
+        background: transparent;
         border-radius: 6px;
+        border: 2px solid #FFC42C;
         padding: 19px 47px 19px 47px;
         text-align: center;
         font-style: normal;
@@ -99,6 +101,10 @@
         line-height: 16px;
         color: #000000;
         margin-right: 11px; 
+}
+
+.aboutboat__button-reserve:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
 }
 
 .aboutboat__price {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './rent.css';
 import axios from 'axios';
-import Modalreserv from '../components/modalreserv/Modalreserv';
-import { Link } from 'react-router-dom';
+// import Modalreserv from '../components/modalreserv/Modalreserv';
+// import { Link } from 'react-router-dom';
 import Howtoorder from '../sections/Howtoorder';
 import Boatcard from '../components/boatcard/Boatcard';
 
@@ -96,7 +96,7 @@ if (!items){
                           priceOld={items.priceOld}
                           
                         />
-                    ))};
+                    ))}
 
                   </div>
               </div>
@@ -104,14 +104,12 @@ if (!items){
       </div>
     </div>
 
-    <Modalreserv {...items}
-                
-                trigger={buttonPopup}
-                setTrigger={setButtonPopup}
-            >
-                
-            </Modalreserv> 
-
+      {/* <Modalreserv {...items}
+        trigger={buttonPopup}
+        setTrigger={setButtonPopup}
+      ></Modalreserv>
+        <Modalreserv/> */}
+                     
       <Howtoorder />
     </>
   );

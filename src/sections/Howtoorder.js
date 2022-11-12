@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../sections/Howtoorder.css';
 
 
@@ -85,8 +86,11 @@ function Howtoorder() {
             </div>
 
             <div className="howtoorder__buttons">
-                <a className="howtoorder__button-catalog" href="#id">Перейти в каталог</a>
-                <a className="howtoorder__button-selection" href="#id">Быстрый подбор яхт</a>
+                
+                <Link to="/rent" href="#header" className="howtoorder__button-catalog">Перейти в каталог</Link>
+                    
+                            
+                {/* <a className="howtoorder__button-selection" href="#id">Быстрый подбор яхт</a> */}
             </div>
         </div>
     </div>

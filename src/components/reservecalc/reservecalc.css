@@ -1,4 +1,14 @@
-.calc__main {
+.calc {
     height: 468px;
     background-color: #FFFFFF;
+    padding: 50px 155px 75px;
+}
+
+.calc__main-header {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #205694;
+    margin-bottom: 50px;
 }

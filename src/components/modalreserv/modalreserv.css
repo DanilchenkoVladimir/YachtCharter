@@ -56,11 +56,27 @@ form select {
     margin-bottom: 25px;
 }
 
-.input__wrap-top {
+.input__main-name {
+    padding: 20px 6px 20px 24px;
+    width: 100%;
+    padding: 20px 6px 20px 24px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    background: #FFFFFF;
+    border: 1px solid #D4E3EC;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+/* .input__wrap-top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-}
+
+} */
 
 .input__wrap-center {
     display: flex;
@@ -70,7 +86,7 @@ form select {
     margin-bottom: 25px;
 }
 
-.input__wrap-bottom {
+.input__wrap-bottom, .input__wrap-top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px; 
@@ -85,7 +101,7 @@ form select {
     background: #FFFFFF;
     border: 1px solid #D4E3EC;
     border-radius: 6px;
-    width: 230px;  
+    width: 220px;  
 }
 
 .checkbox { 
@@ -113,16 +129,20 @@ input label {
     height: 56px;
     left: 480px;
     top: 578px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
+    background: transparent;
     box-shadow: inset 0px 0px 4px #FFFFFF;
-    border-radius: 10px;
-    border: none;
+    border-radius: 6px;
+        border: 2px solid #FFC42C;
     cursor: pointer;
     font-weight: 700;
     font-size: 17px;
     line-height: 17px;
     text-align: center;
     color: #000000;
+}
+
+.send__btn:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
 }
 
 /* input[type=date]::-webkit-calendar-picker-indicator{

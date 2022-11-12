@@ -14,13 +14,9 @@ function AboutBoat() {
     
   const [items, setItem] = React.useState();
   const { id } = useParams();
-  
   const [buttonPopup, setButtonPopup] = React.useState(false);
-
- 
   
-  
-  React.useEffect(() => {
+    React.useEffect(() => {
         async function fetchBoat() {
             try {
                 const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/items/' + id);
@@ -119,16 +115,13 @@ function AboutBoat() {
                 </div>
             </div>
 
-            <Modalreserv {...items}
-                
+            <Modalreserv {...items}   
                 trigger={buttonPopup}
                 setTrigger={setButtonPopup}
-            >
-                
-            </Modalreserv>    
-            
-
-            <Reservecalc />
+            /><Modalreserv/> 
+            <Modalreserv/>              
+               
+            <Reservecalc {...items}/>
 
             <SectionTemplate 
                 headerText="Дополнительные услуги"

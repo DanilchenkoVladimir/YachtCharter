@@ -1,14 +1,12 @@
 import React from 'react';
 import '../boatcard/boatcard.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Modalreserv from '../modalreserv/Modalreserv';
-
 
 
 function Boatcard(props) {
     const [buttonPopup, setButtonPopup] = React.useState(false);
-    
-
+    const location = useLocation();
     return (
         <>
         <div className="boatcart">
@@ -42,24 +40,24 @@ function Boatcard(props) {
                     </div>
 
                     <div className="boatcart__buttons">
-                    <a className="boatcart__button-reserve" href="#id" onClick={() => setButtonPopup(true)}>Забронировать</a>    
-                    <Link className="boatcart__button-about" key={props.id} to={`/boats/${props.id}`}>Подробнее</Link>
-                        {/* <a  href="#id" >Забронировать</a>
-                       
-                        <a className="boatcart__button-about" href="#id">Подробнее</a> */}
+                        {location.pathname !== '/' && (
+                            <a className="boatcart__button-reserve" href="#id" onClick={() => setButtonPopup(true)}>Забронировать</a>
+                        )}
+                    
+                        <Link className="boatcart__button-about" key={props.id} to={`/boats/${props.id}`}>Подробнее</Link>
                     </div>
                 </div>
         </div>
-        <Modalreserv {...props}
-                
-                trigger={buttonPopup}
-                setTrigger={setButtonPopup}
-            >
-                
-            </Modalreserv> 
 
-      
-    </>
+        <Modalreserv {...props}      
+            trigger={buttonPopup}
+            setTrigger={setButtonPopup}
+        />
+        
+        
+        
+                
+        </>
     );
 }
 

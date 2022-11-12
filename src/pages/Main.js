@@ -9,7 +9,7 @@ import About from '../sections/About';
 import SectionTemplate from '../sections/SectionTemplate';
 import Routecartsm from '../components/routecartsm/Routecartsm';
 import Questions from '../sections/Questions';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 // import { boats } from '../Data'; //старый импорт через файл
