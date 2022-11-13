@@ -1,7 +1,20 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import '../sections/Howtoorder.css';
+
+function ScrollToTop(){
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, [pathname]);
+    
+    return null;
+}
+
 
 
 function Howtoorder() {
@@ -87,7 +100,7 @@ function Howtoorder() {
 
             <div className="howtoorder__buttons">
                 
-                <Link to="/rent" href="#header" className="howtoorder__button-catalog">Перейти в каталог</Link>
+                <Link to="/rent" href="#header" className="howtoorder__button-catalog" onClick={ScrollToTop()}>Перейти в каталог</Link>
                     
                             
                 {/* <a className="howtoorder__button-selection" href="#id">Быстрый подбор яхт</a> */}

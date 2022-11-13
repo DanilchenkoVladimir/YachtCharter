@@ -53,7 +53,7 @@ form select {
     background: #FFFFFF;
     border: 1px solid #D4E3EC;
     border-radius: 6px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .input__main-name {
@@ -101,7 +101,7 @@ form select {
     background: #FFFFFF;
     border: 1px solid #D4E3EC;
     border-radius: 6px;
-    width: 220px;  
+    width: 232px;  
 }
 
 .checkbox { 
@@ -110,10 +110,14 @@ form select {
     margin-bottom: 20px;
 }
 
+.popup__checkbox-box {
+    margin-right: 12px;
+}
+
 input {
     width: 20px;
     height: 20px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 input label {

@@ -29,11 +29,11 @@ function Modalreserv(props){
                             
                     <div className="input__wrap-center">
                         <div className="checkbox">
-                            <input type="checkbox"/>
+                            <input className="popup__checkbox-box" type="checkbox"/>
                             <label>Услуги профессионального повара ( + 10 000 ₽ )</label>
                         </div>
                         <div className="checkbox">
-                            <input type="checkbox"/>
+                            <input className="popup__checkbox-box" type="checkbox"/>
                             <label>Гидроцикл ( + 12 000 ₽/час ) </label>
                         </div>
                         

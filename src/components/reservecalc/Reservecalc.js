@@ -2,9 +2,6 @@ import React from "react";
 import "../reservecalc/reservecalc.css";
 
 
-
-
-
 function Reservecalc(props) {
     return (
      <>
@@ -15,64 +12,52 @@ function Reservecalc(props) {
                 
             <div className="calc__main-form">           
                 <form action="" className="popup__form">
-                    <input className="input__main-name" type="text" placeholder="kjlrf"/>
                     
-                    <select>
-                        <option value={props.name}>
-                            <li>
-                                {props.name}
-                            </li>
-                        </option>     
-                    </select>
+                    <div className="popup__form-top">
+                        <select>
+                            <option value={props.name}>
+                                <li>
+                                    {props.name}
+                                </li>
+                            </option>     
+                        </select>
 
-                    <select>
-                        <option value="На какое время планируете выйти в море?" placeholder="На какое время планируете выйти в море?">
-                            <ul>
-<li>
-                                <div>1 день</div>
-                            </li>
-                            <li>
-                                <div>21 день</div>
-                            </li>
-
-                            <li>
-                                <div>21 день</div>
-                            </li>
-
-                            </ul>
-                            
-                        </option>     
-                    </select>
-
-
-
-
-                    <div className="input__wrap-left">
-                        <input className="input__main" type="text"  placeholder="Количество человек"/>
-                        <input className="input__main" type="date" id="date" name="date"/>
-                    </div>    
-                        
-                    <div className="input__wrap-right">
-                        <input className="input__main" type="text" placeholder="Ваше имя" />
-                        <input className="input__main" type="text" placeholder="Ваш телефон" />
+                        <select>
+                            <option value="На какое время планируете выйти в море?" placeholder="На какое время планируете выйти в море?">
+                                <li>
+                                    <div>21 день</div>
+                                </li>
+                            </option>     
+                        </select>
                     </div>
-
-                    <div className="input__wrap-bottom">
-                        <div className="checkbox">
-                            <input type="checkbox"/>
+                    
+                    <div className="calc__form-center">
+                        <div className="calc__wrap-left">
+                            <input className="input__main" type="text"  placeholder="Количество человек"/>
+                            <input className="input__main" type="date" id="date" name="date"/>
+                        </div>    
+                                                
+                        <div className="calc__wrap-right">
+                            <input className="input__main" type="text" placeholder="Ваше имя" />
+                            <input className="input__main" type="text" placeholder="Ваш телефон" />
+                        </div>
+                    </div>
+                   
+                    <div className="calc__wrap-bottom">
+                        <div className="calc__checkbox">
+                            <input className="calc__checkbox-box" type="checkbox"/>
                             <label>Услуги профессионального повара ( + 10 000 ₽ )</label>
                         </div>
-                        <div className="checkbox">
-                            <input type="checkbox"/>
+                        <div className="calc__checkbox">
+                            <input className="calc__checkbox-box" type="checkbox"/>
                             <label>Гидроцикл ( + 12 000 ₽/час ) </label>
                         </div>
                     </div> 
                     
-                       
-                    <div className="popup__wrap">
-                    <button className="close__btn"></button>
+                    <div className="calc__button-wrap">
+                        <button className="send__btn" >Отправить</button> 
                     </div>
-                    <button className="send__btn" >Отправить</button>    
+                       
                 </form>
             </div>
         </div>   
