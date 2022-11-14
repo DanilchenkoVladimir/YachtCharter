@@ -1,11 +1,34 @@
 import React from 'react';
+import axios from 'axios';
 import './paths.css';
 import Howtoorder from '../sections/Howtoorder';
-import Routecartlg from '../components/routecartlg/Routecartlg';
+import Routecardlg from '../components/routecardlg/Routecardlg';
 
 
 
 function Paths() {
+
+  const [items, setItem] = React.useState([])
+
+  React.useEffect(() => {
+    async function fetchRoutes() {
+        try {
+            const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/routes/');
+            setItem(data);
+        } catch (error) {
+            alert('error...');    
+        }
+    }
+    fetchRoutes();    
+  }, []);
+
+  if (!items){
+    return 'loading...';
+  }
+
+
+
+
   return (
     <>
       <div className="catalog">
@@ -37,23 +60,19 @@ function Paths() {
             <div className="catalog__paths">
                 <h3 className="catalog__header">Популярные маршруты</h3>
 
-                  <Routecartlg/>
-                  {/* <div className="catalog__main">
+                  {/* <Routecartlg/> */}
+                  <div className="catalog__main">
                     {items.map((items) => (
-                       <Boatcard 
+                       <Routecardlg 
                           id={items.id}
-                          name={items.name}
-                          boatImg={items.boatImg}
-                          home={items.home}
-                          passenger={items.passenger}
-                          width={items.width}
-                          class={items.class}
-                          priceNew={items.priceNew}
-                          priceOld={items.priceOld}
-                          
+                          routeName={items.routeName}
+                          routePoints={items.routePoints}
+                          travelTime={items.travelTime}
+                          entert={items.entert}
+                          routeImg={items.routeImg}
                         />
                     ))}
-                  </div> */}
+                  </div>
             </div>
           </div>
         </div>

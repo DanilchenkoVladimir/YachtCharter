@@ -4,20 +4,56 @@
     background-color: #FFFFFF;
     border-radius: 10px;
     width: 950px;
-    height: 394px;
+    min-height: 394px;
     padding: 20px 20px 20px 44px;
     box-shadow: 0px 4px 40px rgb(5 19 53 / 10%);
 }
 
 .routecard__lg-features {
-    width: 251px;
+    width: 335px;
 }
 
 .routecard__lg-img {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
+
+.modal {
+    /* position: absolute; */
+    
+    left: 0;
+    top: 0;
+    background-color: black;
+    
+    border-radius: 16px;
+    
+}
+.point {
+    position: absolute;
+    /* content: url(/img/ico/calculator.png); */
+    left: 100px;
+    top: 148px;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+}
+
+.point span{
+    border-radius: 5px 5px 5px 5px;
+    visibility: hidden;
+    position: absolute;
+    left: 200px;
+    background: #fff;
+    box-shadow: -2px 2px 10px -1px #333; 
+    border-radius: 5px;	
+}
+
+.point:hover span{
+    visibility: visible;
+    }
 
 .polygon {
     position: absolute;
@@ -42,16 +78,19 @@
 
 .polygon:hover {
     
-    transform: translate(-20px, 20px);
+    
     transform: scale(3.2);
+    z-index: 1;
 }
 
-.polygon2:hover {
-    transform: scale(3.2)
+.point:hover span {
+    transform: scale(3.2);
+    z-index: 1;
 }
 
 .polygon3:hover {
-    transform: scale(3.2)
+    transform: scale(3.2);
+    z-index: 1;
 }
 
 .routecard__lg-header {
@@ -64,7 +103,7 @@
     
 }
 
-.routecartsm__list  {
+.routecard__lg-list  {
     display: flex;
     flex-direction: column;
     list-style-type: decimal;
@@ -81,7 +120,8 @@
     color: #272A35;
 }
 
-.routecartsm__about-time {
+
+.routecard__lg-abouttime {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -96,17 +136,24 @@
     margin-bottom: 36px;
 }
 
-.descr__time, .descr__entertainment{
+.routecard__lg-descrtime, .routecard__lg-descrentertainment{
     margin-left: 3px;
     font-weight: 600;
     color: #3E5E82;
 }
 
-.routecartsm__about-entertainment {
+.routecard__lg-about-entertainment {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 11px;
 }
+
+.routecard__lg-nonumlist {
+    list-style-type: none;
+}
+
+
+
 
 
