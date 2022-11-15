@@ -63,13 +63,20 @@ function Paths() {
                   {/* <Routecartlg/> */}
                   <div className="catalog__main">
                     {items.map((items) => (
-                       <Routecardlg 
-                          id={items.id}
-                          routeName={items.routeName}
-                          routePoints={items.routePoints}
-                          travelTime={items.travelTime}
-                          entert={items.entert}
-                          routeImg={items.routeImg}
+                       <Routecardlg {...items}
+                          // id={items.id}
+                          // routeName={items.routeName}
+                          // routePoints={items.routePoints}
+                          // travelTime={items.travelTime}
+                          // entert={items.entert}
+                          // routeImg={items.routeImg}
+                          // polygon01={items.polygon01}
+                          // polygon02={items.polygon02}
+                          // polygon03={items.polygon03}
+                          // bigImg01={items.bigImg01}
+                          // bigImg02={items.bigImg02}
+                          // bigImg03={items.bigImg03}
+
                         />
                     ))}
                   </div>

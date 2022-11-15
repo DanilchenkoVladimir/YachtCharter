@@ -10,7 +10,7 @@
 }
 
 .routecard__lg-features {
-    width: 335px;
+    width: 320px;
 }
 
 .routecard__lg-img {
@@ -20,16 +20,34 @@
     align-items: flex-start;
 }
 
-.modal {
-    /* position: absolute; */
-    
-    left: 0;
-    top: 0;
-    background-color: black;
-    
-    border-radius: 16px;
-    
+#ModalImage {
+    position: absolute;
 }
+
+.modal__first {
+    position: absolute;
+    left: 258px;
+    top: 15px;
+}
+
+.modal__left {
+    position: absolute;
+    right: 150px;
+    top: 15px;
+}
+
+.modal__center {
+    position: absolute;
+    right: 80px;
+    top: 15px;
+}
+
+.modal__right {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
 .point {
     position: absolute;
     /* content: url(/img/ico/calculator.png); */
@@ -118,7 +136,15 @@
     Opacity: 40%;
     Fill: Solid;
     color: #272A35;
+    text-align: justify;
 }
+
+/* .routecard__lg-item:hover {
+    Font-size: 20px;
+} */
+
+
+
 
 
 .routecard__lg-abouttime {
