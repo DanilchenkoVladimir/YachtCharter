@@ -7,12 +7,13 @@ import Modalreserv from '../modalreserv/Modalreserv';
 function Boatcard(props) {
     const [buttonPopup, setButtonPopup] = React.useState(false);
     const location = useLocation();
+
     return (
         <>
         <div className="boatcart">
             <img className="boatcart__img" src={props.boatImg} alt=""/>
                 <div className="boatcart__features">
-                    <h4 className="boatcart__features-header">{props.name}</h4>
+                    <h4 className="boatcart__features-header">{props.name.toUpperCase()}</h4>
                         <div className="boatcart__features-descr">
                             <ul className="boatcart__list">
                                 <li className="boatcart__item">

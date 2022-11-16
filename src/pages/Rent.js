@@ -1,40 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import './rent.css';
 import axios from 'axios';
 // import Modalreserv from '../components/modalreserv/Modalreserv';
 // import { Link } from 'react-router-dom';
 import Howtoorder from '../sections/Howtoorder';
 import Boatcard from '../components/boatcard/Boatcard';
-
+import Filter from '../components/filter/Filter';
 // import { boats } from '../Data';
 // import { useEffect } from 'react';
 
 function Rent() {
-  // console.log(boats);
-  const [items, setItem] = React.useState([])
+  
+  const [items, setItem] = React.useState([]);
   // const [filtered, setFiltered] = useState(boats)
   const [buttonPopup, setButtonPopup] = React.useState(false);
-  
+  const [categoryName, setCategoryId] = React.useState([]);
   // useEffect ( ()=> {
   //   setFiltered(boats)
   // }, [boats])
 
+//   React.useEffect(() => {
+//     async function fetchBoat() {
+//         try {
+//             const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/items?filter=' + categoryName);
+//             setItem(data);
+//         } catch (error) {
+//             alert('error...');    
+//         }
+//     }
+//     fetchBoat();    
+// }, [categoryName]);
+
+// if (!items){
+//     return 'loading...';
+// }
+
   React.useEffect(() => {
-    async function fetchBoat() {
-        try {
-            const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/items/');
-            setItem(data);
-        } catch (error) {
-            alert('error...');    
-        }
-    }
-    fetchBoat();    
-}, []);
-
-if (!items){
-    return 'loading...';
-}
-
+      fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items?region=' + categoryName)
+        .then((res) => res.json())
+        .then((arr) => {
+            setItem(arr);
+        });
+        window.scrollTo(0, 0);
+  }, [categoryName]);
 
 
   // function filterRegion(region) {
@@ -62,10 +71,10 @@ if (!items){
               <div className="side__filter-buttons">
                 {/* <button className="filter-button" onClick={ ()=>filterRegion('crimea')}>Крым</button>
                 <button className="filter-button" onClick={ ()=>filterRegion('sochi')}>Сочи</button> */}
-                <button >Сочи</button>
+                <Filter value={categoryName} onClickCategory={(i) => setCategoryId(i)}/>
               </div>
 
-              <div className="side__form-port">
+              {/* <div className="side__form-port">
                 <h3 className="form__port-header">Порт</h3>
 
                 <form>
@@ -76,7 +85,8 @@ if (!items){
                   <input type="checkbox" name="yalta"/> 
                   <label for="yalta">Ялта</label>
                 </form>
-              </div>
+                
+              </div> */}
           </div>
         
 

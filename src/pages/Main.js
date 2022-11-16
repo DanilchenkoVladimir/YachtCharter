@@ -24,7 +24,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Main() {
     const [items, setItem] = React.useState([]) //хук useState для рендеринга карточек лодок, массив лодок - items
-
+    const [routes, setRoute] = React.useState([])
     
     
     
@@ -54,6 +54,22 @@ function Main() {
         return 'loading...';
     }
 
+    React.useEffect(() => {
+        async function fetchRoute() {
+            try {
+                const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/routes/');
+                setRoute(data);
+            } catch (error) {
+                alert('error...');    
+            }
+        }
+        fetchRoute();    
+    }, []);
+
+    if (!routes){
+        return 'loading...';
+    }
+
 
 
 
@@ -66,8 +82,8 @@ function Main() {
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 1024,
@@ -170,13 +186,13 @@ function Main() {
         <div className="container">
             <div className="sectionTemplate-slider">
                 <Slider {...settings}>
-                    {routes.map((obj) => (
-                        <Routecartsm
-                            key={obj.id}
-                            nameofroute={obj.nameofroute}
-                            img={obj.routeImg}
-                            time={obj.time}
-                            activity={obj.activity}
+                    {routes.map((routes) => (
+                        <Routecartsm {...routes}
+                            // key={obj.id}
+                            // nameofroute={obj.nameofroute}
+                            // img={obj.routeImg}
+                            // time={obj.time}
+                            // activity={obj.activity}
                         />
                     ))}
                 </Slider>        

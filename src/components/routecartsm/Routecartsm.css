@@ -1,15 +1,29 @@
 .routecartsm {
+    /* display: flex; */
     background-color: #FFFFFF;
     border-radius: 10px;
     max-width: 420px;
-    padding: 0 24px 22px 24px;
+    min-height: 586px;
+    padding: 10px 19px 17px 20px;
     align-items: center;
     overflow: hidden;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    justify-content: space-between;
 }
 
 .routecartsm__img {
-    position: relative;
-    left: -60px;
+    /* position: relative;
+    left: -60px; */
+    /* height: 100%; */
+        width: 100%;
+}
+
+.routecartsm__features{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .routecartsm__route-header {
@@ -38,6 +52,10 @@
     color: #272A35;
 }
 
+.routecardsm-nonumlist {
+    list-style-type: none;
+}
+
 .routecartsm__about-time {
     display: flex;
     flex-direction: row;
@@ -62,7 +80,7 @@
 .routecartsm__about-entertainment {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 11px;
 }
 
