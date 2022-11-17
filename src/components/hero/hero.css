@@ -1,9 +1,6 @@
 .main {
     position: relative;
     padding: 106px 0 193px;
-    
-    /* height: 100vh; */
-    /* height: 953px; */
 }
 
 .mainscreen {
@@ -20,16 +17,6 @@
     height: 100%;
     object-fit: cover;
 }
-
-/* 
-.main::after{
-    position: absolute;
-    content: url(/public/img/main-bgback.png);
-    /* left: 0; */
-    /* bottom: 0;
-    left:0;
-    min-width: 1440px;
-*/ 
 
 .main__text {
     margin-bottom: 61px;
@@ -57,7 +44,6 @@
 }
 
 .main__button-catalog {
-    /* display: inline-block; */
     position: relative;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
     box-shadow: inset 0px 0px 4px #FFFFFF;

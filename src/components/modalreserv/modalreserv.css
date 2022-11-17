@@ -53,7 +53,6 @@ form select {
     background: #FFFFFF;
     border: 1px solid #D4E3EC;
     border-radius: 6px;
-    /* margin-bottom: 25px; */
 }
 
 .input__main-name {
@@ -70,13 +69,6 @@ form select {
     border-radius: 6px;
     margin-bottom: 25px;
 }
-
-/* .input__wrap-top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-
-} */
 
 .input__wrap-center {
     display: flex;
@@ -117,7 +109,6 @@ form select {
 input {
     width: 20px;
     height: 20px;
-    /* margin-right: 20px; */
 }
 
 input label {
@@ -148,13 +139,3 @@ input label {
 .send__btn:hover {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
 }
-
-/* input[type=date]::-webkit-calendar-picker-indicator{
-	display:none;
-}
-input[type=date]{
-	background:url("/img/ico/reserv-calendar.svg") #f7f9fc no-repeat 90% 50%;
-} */
-
-
-

@@ -3,7 +3,6 @@
     background-color: #012146;
     padding: 20px 0 16px;
     color: #FFFFFF;
-    
 }
 
 .header__top {
@@ -51,9 +50,6 @@
     letter-spacing: 0.04em;
 }
 
-
 .header__top-social a:not(:first-child) {
     margin-left: 9px;
 }
-
-

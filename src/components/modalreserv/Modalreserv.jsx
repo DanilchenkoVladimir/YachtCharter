@@ -2,7 +2,6 @@ import React from "react";
 import '../modalreserv/modalreserv.css';
 
 function Modalreserv(props){
-    // console.log(props);
     return(props.trigger) ? (
         <div className="popup">
             <div className="popup__inner">
@@ -12,13 +11,6 @@ function Modalreserv(props){
                 </div>
                 
                 <form action="" className="popup__form">
-                    {/* <select>
-                        <option value={props.name}>
-                            <li>
-                                {props.name}
-                            </li>
-                        </option>     
-                    </select> */}
                     <input className="input__main-name" type="text" placeholder={props.name}/>
                         
                     <div className="input__wrap-top">

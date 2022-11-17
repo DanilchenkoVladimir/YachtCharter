@@ -3,6 +3,7 @@ import "../reservecalc/reservecalc.css";
 
 
 function Reservecalc(props) {
+
     return (
      <>
         <div className="calc">
@@ -18,14 +19,6 @@ function Reservecalc(props) {
                             <option value={props.name}>
                                 <li>
                                     {props.name}
-                                </li>
-                            </option>     
-                        </select>
-
-                        <select>
-                            <option value="На какое время планируете выйти в море?" placeholder="На какое время планируете выйти в море?">
-                                <li>
-                                    <div>21 день</div>
                                 </li>
                             </option>     
                         </select>

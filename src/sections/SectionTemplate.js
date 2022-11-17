@@ -6,7 +6,7 @@ function SectionTemplate(props) {
   return (
       <div className="sectionTemplate">
           <div className="container">
-              
+          
             <div className="sectionTemplate__top">
                 <div className="sectionTemplate__top-top">                
                     <h3 className="sectionTemplate__top-header">{props.headerText}</h3>

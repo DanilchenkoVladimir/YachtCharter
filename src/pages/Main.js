@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import Hero from '../components/hero/Hero';
 import Ports from '../components/ports/Ports';
 import Boatcard from '../components/boatcard/Boatcard';
@@ -8,71 +7,37 @@ import Servicescart from '../components/servicescart/Servicescart';
 import About from '../sections/About';
 import SectionTemplate from '../sections/SectionTemplate';
 import Routecartsm from '../components/routecartsm/Routecartsm';
-import Questions from '../sections/Questions';
-// import { Link } from 'react-router-dom';
-
-
-// import { boats } from '../Data'; //старый импорт через файл
-import { services } from '../Data';
-import { routes } from '../Data';
+import Questions from '../sections/Questions'; 
+import { services } from '../Data'; //старый импорт через файл
+import '../pages/main.css';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-
-
 function Main() {
     const [items, setItem] = React.useState([]) //хук useState для рендеринга карточек лодок, массив лодок - items
     const [routes, setRoute] = React.useState([])
     
-    
-    
-    // React.useEffect(() => {
-    //     fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items')
-    //         .then((response) => {
-    //             return response.json();
-    //         })
-    //         .then((json) => {
-    //             setItems(json);
-    //         });
-    // }, []); //запрос на мокапи, получаем массив под именем json с данными по лодкам
+    React.useEffect(() => {
+        fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items')
+            .then((response) => {
+                return response.json();
+            })
+            .then((json) => {
+                setItem(json);
+            });
+    }, []);
     
     React.useEffect(() => {
-        async function fetchBoat() {
-            try {
-                const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/items/');
-                setItem(data);
-            } catch (error) {
-                alert('error...');    
-            }
-        }
-        fetchBoat();    
-    }, []);
-
-    if (!items){
-        return 'loading...';
-    }
-
-    React.useEffect(() => {
-        async function fetchRoute() {
-            try {
-                const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/routes/');
-                setRoute(data);
-            } catch (error) {
-                alert('error...');    
-            }
-        }
-        fetchRoute();    
-    }, []);
-
-    if (!routes){
-        return 'loading...';
-    }
-
-
-
-
+        fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/routes')
+            .then((response) => {
+                return response.json();
+            })
+            .then((json) => {
+                setRoute(json);
+            });
+    }, []); 
 
     const settings = {
         arrows: true,
@@ -82,8 +47,8 @@ function Main() {
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
           {
             breakpoint: 1024,
@@ -112,14 +77,12 @@ function Main() {
         ]
     }; //слайдер-настройки
 
-    
     return (
     <>
-        <Hero />
-        <Ports />
+      <Hero />
+      <Ports />
     
         <div className="container">
-            
             <SectionTemplate 
                 headerText="Все яхты"
                 linkText="Открыть каталог"
@@ -147,10 +110,7 @@ function Main() {
                 </Slider>        
             </div>
         </div>
-
-        
-        
-    
+            
         <Howtoorder />
         
         <SectionTemplate 
@@ -187,13 +147,7 @@ function Main() {
             <div className="sectionTemplate-slider">
                 <Slider {...settings}>
                     {routes.map((routes) => (
-                        <Routecartsm {...routes}
-                            // key={obj.id}
-                            // nameofroute={obj.nameofroute}
-                            // img={obj.routeImg}
-                            // time={obj.time}
-                            // activity={obj.activity}
-                        />
+                        <Routecartsm {...routes}/>
                     ))}
                 </Slider>        
             </div>

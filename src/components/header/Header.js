@@ -1,19 +1,14 @@
-
 import React from 'react';
 import '../header/header.css';
-
 import { Routes, Route, Link } from 'react-router-dom';
 import Rent from '../../pages/Rent';
 import Paths from '../../pages/Paths';
 import Main from '../../pages/Main';
 import AboutBoat from '../../pages/AboutBoat.js';
-// import Footer from '../footer/Footer';
-// import AboutBoat from '../pages/AboutBoat';
 
 function Header() {
   return (
     <>
-
     <div className="header" id="header">
         <div className="container">
             <div className="header__top">
@@ -22,6 +17,7 @@ function Header() {
                         <img src="/img/logo.svg" alt="logo" />
                     </Link>
                 </div>
+
                 <nav className="header__top-nav">
                     <ul className="header__top-navlist">
                         <li className="header__top-item">
@@ -39,11 +35,6 @@ function Header() {
                                 Маршруты
                             </a>
                         </li>
-                        {/* <li className="header__top-item">
-                            <a href="#id" className="header__top-link">
-                                доп. услуги
-                            </a>
-                        </li> */}
                         <li className="header__top-item">
                             <a href="#footer" className="header__top-link">
                                 Контакты
@@ -53,8 +44,7 @@ function Header() {
                 </nav>
 
                 <div className="header__top-tel">
-                    <img src="/img/ico/tel.svg" alt="" />
-                    {/* <p>+7 (978) 050-43-16</p> */}
+                    <img src="/img/ico/tel.svg" alt="telefon" />
                     <a href="tel:+79992557632">+7 (999) 255-76-32</a>           
                 </div>
 
@@ -82,8 +72,6 @@ function Header() {
             <Route path='/rent' element={ <Rent /> } />
             <Route path='/paths' element={ <Paths /> } />
             <Route path='/boats/:id' element={ <AboutBoat /> } />
-            {/* <Route path='/contacts' element={ <Footer /> } /> */}
-            {/* <Route path='/aboutBoat/:id' element={ <AboutBoat /> } />    */}
         </Routes>
     </>
   );

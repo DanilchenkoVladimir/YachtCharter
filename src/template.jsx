@@ -54,3 +54,19 @@
                             priceOld={items.priceOld}
                         />
                     ))} */}
+
+//   React.useEffect(() => {
+//     async function fetchBoat() {
+//         try {
+//             const { data } = await axios.get('https://631f871f22cefb1edc4dd7fd.mockapi.io/items?filter=' + categoryName);
+//             setItem(data);
+//         } catch (error) {
+//             alert('error...');    
+//         }
+//     }
+//     fetchBoat();    
+// }, [categoryName]);
+
+// if (!items){
+//     return 'loading...';
+// } 

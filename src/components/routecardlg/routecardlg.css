@@ -50,7 +50,6 @@
 
 .point {
     position: absolute;
-    /* content: url(/img/ico/calculator.png); */
     left: 100px;
     top: 148px;
     background-color: black;
@@ -71,32 +70,30 @@
 
 .point:hover span{
     visibility: visible;
-    }
+}
 
 .polygon {
     position: absolute;
     top: 15px;
     right: 150px;
-    transition: 1s; /* Время эффекта */
+    transition: 1s; 
 }
 
 .polygon2 {
     position: absolute;
     top: 15px;
     right: 80px;
-    transition: 1s; /* Время эффекта */
+    transition: 1s; 
 }
 
 .polygon3 {
     position: absolute;
     top: 15px;
     right: 10px;
-    transition: 1s; /* Время эффекта */
+    transition: 1s; 
 }
 
-.polygon:hover {
-    
-    
+.polygon:hover { 
     transform: scale(3.2);
     z-index: 1;
 }
@@ -112,13 +109,11 @@
 }
 
 .routecard__lg-header {
-    
     font-weight: 600;
     font-size: 32px;
     line-height: 32px;
     color: #205694;
-    margin-bottom: 31px;
-    
+    margin-bottom: 31px;   
 }
 
 .routecard__lg-list  {
@@ -139,14 +134,6 @@
     text-align: justify;
 }
 
-/* .routecard__lg-item:hover {
-    Font-size: 20px;
-} */
-
-
-
-
-
 .routecard__lg-abouttime {
     display: flex;
     flex-direction: row;
@@ -155,10 +142,6 @@
 }
 
 .routecard__lg-descr {
-    /* font-weight: 600;
-    Font-size: 15px;
-    Line-height: 17px;
-    color: #000000; */
     margin-bottom: 36px;
 }
 
@@ -178,8 +161,3 @@
 .routecard__lg-nonumlist {
     list-style-type: none;
 }
-
-
-
-
-

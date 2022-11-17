@@ -48,33 +48,32 @@ function Routecardlg(props) {
                 className={"modal__first"}
                 small={props.polygon04}
                 large={props.bigImg04}
-                // alt={props.routePoints[3]}
+                
             />          
             
             <ModalImage
                 className={"modal__left"}
                 small={props.polygon01}
                 large={props.bigImg01}
-                // alt={props.routePoints[0]}
+                
             />
 
             <ModalImage
                 className={"modal__center"}
                 small={props.polygon02}
                 large={props.bigImg02}
-                // alt={props.routePoints[1]}
+                
             />
 
             <ModalImage
                 className={"modal__right"}
                 small={props.polygon03}
                 large={props.bigImg03}
-                // alt={props.routePoints[2]}
+                
             />
 
         </div>
     </div>
-    
     </>
   );
 }

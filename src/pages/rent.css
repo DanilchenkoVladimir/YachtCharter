@@ -1,15 +1,10 @@
 .wrapper {
-    
     display: grid;
     grid-template-columns: 270px 3fr;
-    /* grid-template-rows: auto; */
     grid-template-areas: 
           "filter boats boats"
           "filter boats boats"
           "filter boats boats";
-    /* justify-content: center; */
-          
-      
 }
 
 .side__filter {
@@ -38,17 +33,16 @@
     padding-top: 16px;
     padding-bottom: 16px;
     font-weight: 500;
-font-size: 16px;
-line-height: 16px;
-/* identical to box height */
-background: transparent;
-text-align: center;
-border: 2px solid rgba(255, 255, 255, 0.4);
-border-radius: 6px;
-color: #FFFFFF;
-min-width: 105px;
-opacity: 0.4;
-margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 16px;
+    background: transparent;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    color: #FFFFFF;
+    min-width: 105px;
+    opacity: 0.4;
+    margin-bottom: 24px;
 }
 
 .filter-button:not(:first-child) {
@@ -56,9 +50,7 @@ margin-bottom: 24px;
 }
 
 .side__filter-buttons {
-    
     border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
-   
 }
 
 .side__form-port {
@@ -76,26 +68,16 @@ margin-bottom: 24px;
 form>input {
     width: 18px;
     height: 18px;
-
     border: 2px solid #FFFFFF;
     border-radius: 2px;
-
 }
 
 form>label {
     font-weight: 500;
-font-size: 15px;
-line-height: 15px;
-/* identical to box height */
-
-
-color: #FFFFFF;
+    font-size: 15px;
+    line-height: 15px;
+    color: #FFFFFF;
 }
-
-
-
-
-
 
 .catalog__boats {
     padding-top: 54px;
@@ -107,10 +89,7 @@ color: #FFFFFF;
     grid-row-end: -4;
 }
 
-
 .catalog__header  {
-    
-    
     font-weight: 500;
     font-size: 32px;
     line-height: 64px;

@@ -53,11 +53,7 @@ function Boatcard(props) {
         <Modalreserv {...props}      
             trigger={buttonPopup}
             setTrigger={setButtonPopup}
-        />
-        
-        
-        
-                
+        />      
         </>
     );
 }

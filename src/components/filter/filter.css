@@ -1,20 +1,15 @@
 #filter__button {
     padding: 16px 0;
-
-
-
-    
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
-
-background: transparent;
-text-align: center;
-border: 2px solid rgba(255, 255, 255, 0.4);
-border-radius: 6px;
-color: #FFFFFF;
-width: 105px;
-opacity: 0.4;
+    background: transparent;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    color: #FFFFFF;
+    width: 105px;
+    opacity: 0.4;
 }
 
 #filter__button .active{
@@ -24,7 +19,6 @@ opacity: 0.4;
 
 #main__filter-button {
     width: 100%;
-    /* background: transparent; */
     border-radius: 6px;
     border: 2px solid rgba(255, 255, 255, 0.4);
     font-weight: 500;
@@ -32,15 +26,10 @@ opacity: 0.4;
     line-height: 16px;
     text-align: center;
     color: #FFFFFF;
-    /* color: rgba(255, 255, 255, 0.4); */
     padding: 16px 0;
     margin-bottom: 24px;
     cursor: pointer;
 }
-
-/* #main__filter-button:hover{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
-} */
 
 .active {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #FFC42C;
