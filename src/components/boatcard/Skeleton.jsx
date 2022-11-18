@@ -3,19 +3,20 @@ import ContentLoader from "react-content-loader"
 
 const Skeleton = () => (
   <ContentLoader
-    className="Boatcard"
+    className="Boatcard" 
     speed={2}
     width={420}
-    height={505}
-    viewBox="0 0 420 505"
+    height={508}
+    viewBox="0 0 420 508"
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
   >
-    <rect x="0" y="0" rx="0" ry="0" width="420" height="254" /> 
-    <rect x="24" y="274" rx="0" ry="0" width="338" height="31" /> 
-    <rect x="3" y="318" rx="0" ry="0" width="431" height="33" /> 
-    <rect x="8" y="370" rx="0" ry="0" width="354" height="41" /> 
-    <rect x="9" y="437" rx="0" ry="0" width="399" height="62" />
+    <rect x="22" y="453" rx="10" ry="10" width="180" height="52" /> 
+    <rect x="1" y="1" rx="10" ry="10" width="416" height="254" /> 
+    <rect x="213" y="453" rx="10" ry="10" width="180" height="52" /> 
+    <rect x="6" y="322" rx="0" ry="0" width="408" height="61" /> 
+    <rect x="8" y="278" rx="0" ry="0" width="361" height="31" /> 
+    <rect x="9" y="400" rx="0" ry="0" width="280" height="37" />
   </ContentLoader>
 )
 

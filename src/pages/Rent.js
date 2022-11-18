@@ -3,19 +3,24 @@ import './rent.css';
 import Howtoorder from '../sections/Howtoorder';
 import Boatcard from '../components/boatcard/Boatcard';
 import Filter from '../components/filter/Filter';
+import Skeleton from '../components/boatcard/Skeleton';
 
 function Rent() {
   const [items, setItem] = React.useState([]);
   const [categoryName, setCategoryId] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
  
   React.useEffect(() => {
       fetch('https://631f871f22cefb1edc4dd7fd.mockapi.io/items?region=' + categoryName)
         .then((res) => res.json())
         .then((arr) => {
-            setItem(arr);
+          setTimeout(() => {
+              setItem(arr);
+              setIsLoading(false);
+          }, 500);
       });
         window.scrollTo(0, 0);
-  }, [categoryName]);
+  }, [categoryName, isLoading]);
 
   return (
     <>
@@ -32,7 +37,10 @@ function Rent() {
             <div className="catalog__boats">
               <h3 className="catalog__header">Яхты в Крыму</h3>
                 <div className="catalog__main">
-                  {items.map((items) => (
+                  {
+                    isLoading ? [...new Array(6)].map((_, index) => <Skeleton key={index} />) : items.map(items => <Boatcard {...items} />)
+                  }
+                  {/* {items.map((items) => (
                     <Boatcard 
                       id={items.id}
                       name={items.name}
@@ -44,7 +52,7 @@ function Rent() {
                       priceNew={items.priceNew}
                       priceOld={items.priceOld}        
                     />
-                  ))}
+                  ))} */}
                 </div>
             </div>
           </div>
