@@ -2,6 +2,9 @@ import React from "react";
 import '../modalreserv/modalreserv.css';
 
 function Modalreserv(props){
+    const priceShef = 10000;
+    const jetSki = 12000;
+
     return(props.trigger) ? (
         <div className="popup">
             <div className="popup__inner">
@@ -22,11 +25,11 @@ function Modalreserv(props){
                     <div className="input__wrap-center">
                         <div className="checkbox">
                             <input className="popup__checkbox-box" type="checkbox"/>
-                            <label>Услуги профессионального повара ( + 10 000 ₽ )</label>
+                            <label>Услуги профессионального повара (+ {priceShef.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}/час)</label>
                         </div>
                         <div className="checkbox">
                             <input className="popup__checkbox-box" type="checkbox"/>
-                            <label>Гидроцикл ( + 12 000 ₽/час ) </label>
+                            <label>Гидроцикл ( + {jetSki.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}/час ) </label>
                         </div>
                         
                     </div>

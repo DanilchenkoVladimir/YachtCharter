@@ -108,8 +108,8 @@ function AboutBoat() {
                         </div>
 
                         <div className="aboutboat__price">
-                            <p className="boatcart__price-new">{items.priceNew} ₽/час</p>
-                            <p className="boatcart__price-discount">{items.priceOld} ₽/час</p>
+                            <p className="boatcart__price-new">{items.priceNew.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}/час</p>
+                            <p className="boatcart__price-discount">{items.priceOld.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}/час</p>
                         </div>
                     </div>
                 </div>

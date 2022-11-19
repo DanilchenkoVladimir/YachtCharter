@@ -3,6 +3,8 @@ import "../reservecalc/reservecalc.css";
 
 
 function Reservecalc(props) {
+    const priceShef = 10000;
+    const jetSki = 12000;
 
     return (
      <>
@@ -39,11 +41,11 @@ function Reservecalc(props) {
                     <div className="calc__wrap-bottom">
                         <div className="calc__checkbox">
                             <input className="calc__checkbox-box" type="checkbox"/>
-                            <label>Услуги профессионального повара ( + 10 000 ₽ )</label>
+                            <label>Услуги профессионального повара ( + {priceShef.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}/час)</label>
                         </div>
                         <div className="calc__checkbox">
                             <input className="calc__checkbox-box" type="checkbox"/>
-                            <label>Гидроцикл ( + 12 000 ₽/час ) </label>
+                            <label>Гидроцикл ( + {jetSki.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}/час ) </label>
                         </div>
                     </div> 
                     

@@ -38,7 +38,6 @@
   font-style: italic;
 }
 
-
 body {
   margin: 0;
   font-family: 'Graphik-LCG', sans-serif;
@@ -47,9 +46,6 @@ body {
   background-color: #EFF7FC;
   
 }
-
-
-
 
 * {
   box-sizing: border-box;

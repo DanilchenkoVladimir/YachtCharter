@@ -36,7 +36,7 @@ function Boatcard(props) {
                         </div>
 
                     <div className="boatcart__price">
-                        <p className="boatcart__price-new">{props.priceNew} ₽/час</p>
+                        <p className="boatcart__price-new">{props.priceNew.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}/час</p>
                         <p className="boatcart__price-discount">{props.priceOld} ₽/час</p>
                     </div>
 

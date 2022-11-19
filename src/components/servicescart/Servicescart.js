@@ -10,7 +10,7 @@ function Servicescart(props) {
             <p className="servicescart__features-descr">{props.about}</p>
 
             <div className="servicescart__price">
-              <p className="servicescart__price-price">{props.price}</p>
+              <p className="servicescart__price-price">{props.price.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}</p>
               <p className="servicescart__price-option">{props.option}</p>        
             </div>
         </div>
