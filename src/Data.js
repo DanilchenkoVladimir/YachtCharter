@@ -91,13 +91,13 @@ export const services = [
   { service: 'Профессиональный повар',
     serviceImg: '/img/services/cook.jpg',
     about: 'Организуем питание для любого повода и праздника на палубе. Заранее согласуем индивидуальное меню и закупим продукты',
-    price: '10 000 ₽',
+    price: 10000,
     option: '+ продукты'
   },
   { service: 'Гидроцикл',
   serviceImg: '/img/services/scooter.jpg',
   about: 'Гидроциклы Bombardier GTX на 215 и 260 л.с к вашим услугам. Маски и ласты для каждого гостя бесплатно!',
-  price: '12 000 ₽/час',
+  price: 12000,
   option: null
   },
   { service: 'Морская рыбалка',
