@@ -1,4 +1,4 @@
-### ссылка на макет в Figma: (https://www.figma.com/file/rYAXP2ffY7R4LFMko9UQQe/%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0-%D1%8F%D1%85%D1%82-(Copy)?node-id=0%3A1)
+
 
 
 # Getting Started with Create React App
